@@ -14,15 +14,30 @@ plugins {
     id 'application'
 }
 
+version="0.0.1"
+sourceCompatibility = 1.8
+
+description = """${project.name}
+A clone of ProntoEdit.
+
+More information at https://github.com/TheBastConspiracy/ZippyEdit"""
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.bastisawesome.ZippyEdit.Main'
+    }
 }
 
 application {
